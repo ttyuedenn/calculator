@@ -61,6 +61,7 @@ function handleValueEvent(value) {
     case "7":
     case "8":
     case "9":
+      // Handle all number buttons
       if (currentInput === "0" || justEvaluated) {
         currentInput = value;
         justEvaluated = false;
@@ -79,6 +80,7 @@ function handleValueEvent(value) {
     case "-":
     case "/":
     case "*":
+      // Handle all expression
       updateDisplay();
       calculateOrReAssign(value);
       break;
@@ -86,7 +88,10 @@ function handleValueEvent(value) {
     case "AC":
       previousInput = "";
       currentInput = "0";
-      operator = "";
+      operator = "";////0
+
+
+
       updateDisplay();
       break;
 
